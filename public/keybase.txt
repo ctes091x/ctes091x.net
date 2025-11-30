@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/ctes091x
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ctes091x.net
+  * I am ctes091x (https://keybase.io/ctes091x) on keybase.
+  * I have a public key with fingerprint EF58 ABE7 1110 05C7 143D  ED95 DDCB DF29 2184 5B00
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f29eac6d6311bb0e72264b1666ff190e222d41bee961d8cf4459b803a62c9f310a",
+      "fingerprint": "ef58abe7111005c7143ded95ddcbdf2921845b00",
+      "host": "keybase.io",
+      "key_id": "ddcbdf2921845b00",
+      "kid": "0101bcc4f68b2cc8a4a3f49ef4b282cfdddd672ca01c62ecdd6a0acbb959f04bd8300a",
+      "uid": "d7dd3e3abbe311d421c72ef60344ab19",
+      "username": "ctes091x"
+    },
+    "service": {
+      "hostname": "ctes091x.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1764142885,
+  "expire_in": 157680000,
+  "prev": "cb9b0a30500db5898749f875fb7fa8e9fc02d39539ec898092f5cfbf36077599",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owFtUmtQVVUUvrxSGVBURkND4lBpgLbP+xzkIT2mYNSATEDUy9n77ANH8F6494IS
+3owGmR4qJaONGFRADwUnC53IgYAcwBAQwTsBCRYlDDE8nHEkCKhzKP40rT979lrf
+961vrVnveboY3J36b9x92j8/yeB0YwQa1Ke+DM8loFnOIUJyiTS88OB0GVttxjRV
+JkIIQFJAoUQsIU7maJKEEGCeojgGkhzHKQopAkxRlMyQEGORI2UBKQzDilAAtMRR
+SFRoEkhEMKGophRsybCoJpsmixVWkCDmSZIEgEU8ydAylkVWlhGUtX4UKTAsBEAj
+ppqtOkMzByUr3qKatZz2MS7Y+x/8om9AQoQYhRMghZAgMRKtMCJWGEgJFFJkLTie
+QhIgEUdhpP0kICEIRVZUAANlgQYLvrP+6cPLMo1pCUKsLUFmKBLxFFY4QDOMBElR
+B1qxxSQdxBoa2bAViORhwh5MaNlsFWF9sfok/0FsMWGbxs2wmG1mZE7XKqk2W4Y1
+RGfacjJ06CEMjf+KGKFqkrU9aoxsbLGqZhMRQmpIZFN1VZLnGJKhBIENJvDhDNWC
+jaqOYHlOAFrofXC23h2KEEh0ImABkCEriALPiIrAswrkFUnAooIAJdMiS4sYaVUg
+UgqLFKjQHOB5VtTHteJMk1kX14xKKZqoVU0xSbYsCybs7m87064GJ3eD7xp/14mE
+yuGVXm4t3mFjpxePz81ZvzyD+zKvxcxWo5ehorunw0z7NduzH+bWJNmnPF7fl1X8
+x4ef7Z3bkdVasPzBQJuatC6jN2eMXFod8/L9k+Pexx3DhW5Xr68wXHklsLSRv3xe
+aGfijp2rKiufDVQgDk2MfLHhQub8L0X+z7INTGln+0+uXi4/bFxffrkpynfz9P7c
+2p4zpW+2lZ3tDl4VUZx3vzfSu5KtqGlentYZYX3yt+8T+ALJh4sfiq5IS7DGt870
+HwmvHjDmTRReu+qDTnURz3l/xI0mBpZ8enA6vaQ1bk0U+vhe3J73mw6cH+z9M+xX
+ZduAXaraPnd2zi3gznB28NDOkzmvvWCfM88eL155p4vICvq8KMZ5tMMc6HrbuW77
+Ca5l5MLqJf5t01NFjbjx9tq0rkPigfHAGo/QE84tyVc6J3sev/VW0NI98lj1uHJ3
+54rm2bK83UH1db5ftSfbC97dNFH44C+2NSzta7/6U0UReNqDuDT2Ul9/bHdT32Rd
+Xnj9Y16DAU4bvYQNRyfNqbs3D928uarjO++JM7tqhzZU1n/w6CdS88O9nhM7blV9
+0eizbMYxEr9vqDaWv7c/GVxErq+SlsDMxt97oquZXtcfLzaXPDI32P9zZGxMUvSm
+rasDnvFhR8tPh8bkX1+yvtxBw+ffER25ld9ku/c9IUWdm+lycXi0j6z7Nv/I1Bsx
+Oev9PG3zl7ZVzDc4y8k97Wuzjjp2Xfsb
+=6Z4q
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ctes091x
+
+==================================================================
