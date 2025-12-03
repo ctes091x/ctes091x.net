@@ -1,0 +1,28 @@
+---
+const { frontmatter } = Astro.props;
+---
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:site_name" content="綿糸てせのブログ" />
+    <meta property="og:image" content={frontmatter.ogImage} />
+    <style>:global(main img) {width: 620px;} main{width:620px;margin:auto;}p,ul{font-size:1.125rem;line-height:2.25rem;}</style>
+    <title>{frontmatter.title}</title>
+</head>
+<body>
+    <header>
+      <p><a href="https://ctes091x.net">綿糸てせ</a>のブログ</p>
+    </header>
+    <main>
+        <h1>{frontmatter.title}</h1>
+        <article>
+            <slot />
+        </article>
+    </main>
+    <footer>
+      <p>&copy; ctes091x, 2025</p>
+    </footer>
+</body>
+</html>
+

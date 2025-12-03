@@ -1,10 +1,10 @@
 ---
+layout: ../../layouts/blogPostLayout.astro
 title: 'PCにUbuntuを入れて快適にコンリテをやろう'
 author: '綿糸てせ (@ctes091x)'
 pubDate: 2025-12-02
+ogImage: 'https://ctes091x.net/blog/ubuntu-complite/complite_window.png'
 ---
-
-<style>img {max-width: 620px;}body{width:620px;margin:auto;}p,ul{font-size:1.125rem;line-height:2.25rem;}</style>
 
 この記事は[UEC25 Advent Calendar 2025 その1](https://adventar.org/calendars/11349) 2日目の記事です。昨日は[AI](https://x.com/AI_317aaaaaaa)さんの[今日は⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎の誕生日](https://note.com/ai_317aaaaaaa/n/n79c63005c02a)でした。
 
@@ -109,7 +109,7 @@ sciences
 # おわりに
 アドカレの割当日に大々遅刻した挙句、対象読者のよくわからない記事が錬成されてしまいました……え？これを今月もう3回やるんですか？勘弁してください
 
-明日は[えぬぴー](https://x.com/Np27182)さんの「M.U.G.E.Nの魅力、そして高グラフィックゲームが跋扈する時代にこのゲームでキャラ制作を始めた話、あとりさじゅう」です。
+明日は[えぬぴー](https://x.com/Np27182)さんの「[M.U.G.E.Nの魅力、そして高グラフィックゲームが跋扈する時代にこのゲームでキャラ制作を始めた話、あとりさじゅう](https://note.com/np7096/n/nf40c5fab0ce8)」です。
 
 # 参考文献
 
