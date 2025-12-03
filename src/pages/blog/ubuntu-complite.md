@@ -11,12 +11,6 @@ pubDate: 2025-12-02
 # はじめに
 みなさんこんにちは。UEC25の綿糸てせ([@ctes091x](https://x.com/ctes091x))です。普段はMMAというサークルでパソカタをしたり、工学研究部というサークルでパソカタをしたり、SF研究会というサークルを設立したりしています。UECアドベントカレンダーにはこれを含めて4本の記事を投稿予定ですが、その1本目から遅刻などという幸先の悪いことになっています。一体どうするのでしょうね。
 
-<!--install
-ssh
-uecwireless
-vpn
-vscode-->
-
 ## この記事の対象読者
 少なくとも、
 
@@ -58,56 +52,24 @@ VSCodeのリモート接続機能は非常に強力であり、これがあな�
 
 Ubuntuのインストール画面が開いたら、あとは指示に従って必要事項を入力し、順番にボタンを押していくだけでインストールが進行します。
 
-<!--![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-29-08.png)
-
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-29-47.png)
-
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-30-08.png)
-
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-30-12.png)-->
-
-<!--![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-30-41.png)
-
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-31-37.png)
-
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-31-48.png)
-
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-32-10.png)-->
-
-<!--![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-32-22.png)-->
-
 インストールの途中、「どうやってUbuntuをインストールしますか？」という項目で、すでにPCに入っているWindowsを消去するかどうか問われます。ここでは「Ubuntuを他のパーティションと並べてインストールする」を選択することをおすすめします。トラブルがあったときに対処しやすいよう、既存のWindowsも残しておきましょう。
 
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-32-36.png)
-
-<!--![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-33-02.png)-->
-
-<!--![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-33-26.png)-->
-
-<!--![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2006-33-36.png)-->
+![](/blog/ubuntu-complite/how_do_you_install.png)
 
 インストーラの最後の項目で、そこまでの選択を確認できます。入力・選択した内容をよく確認した上で、「インストール」ボタンを押します。
 
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2015-33-47.png)
-
-<!--![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2015-33-59.png)
-
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2015-34-45.png)-->
+![](/blog/ubuntu-complite/check_before_install.png)
 
 しばらく待つと、Ubuntuのインストールが完了します。
 
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2015-40-08.png)
-
-<!--![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2015-44-05.png)
-
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2015-44-14.png)
-
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2015-44-25.png)
-
-![](/blog/ubuntu-complite/install/Screenshot%20from%202025-11-28%2015-44-33.png)-->
+![](/blog/ubuntu-complite/install_completed.png)
 
 # Ubuntuでコンリテをやる
 Ubuntuにはコンリテの実習で使用する多くのツールがあらかじめインストールされているので、すぐに作業を始められます。画面右下のアイコンを押すとアプリ一覧が開くので、ここから「**端末**(Terminal)」を開きます。
+
+![](/blog/ubuntu-complite/terminal_icon.png)
+
+![](/blog/ubuntu-complite/terminal_window.png)
 
 開くのは無機質なあずき色の画面ですが、ここにコマンドを入力することでPCを自由自在に操作できます。実際に、コンリテの前半の講義で扱うコマンドをいくつか実行してみましょう。
 
@@ -142,7 +104,7 @@ sciences
 
 サーバー側のウィンドウを自分の端末で開くときには、X Windowというプロトコルに従ってウィンドウの内容が転送されます。Windowsでこれを行うにはMobaXtermなどのソフトを導入する必要がありますが、Ubuntuにはこの通信を行う機能が内蔵されているため、特殊なセットアップなしでウィンドウを開くことができます。
 
-![](/blog/ubuntu-complite/ssh/Screenshot%20from%202025-11-28%2016-34-21.png)
+![](/blog/ubuntu-complite/complite_window.png)
 
 # おわりに
 アドカレの割当日に大々遅刻した挙句、対象読者のよくわからない記事が錬成されてしまいました……え？これを今月もう3回やるんですか？勘弁してください
