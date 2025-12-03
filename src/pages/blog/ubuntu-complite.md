@@ -54,24 +54,24 @@ Ubuntuのインストール画面が開いたら、あとは指示に従って�
 
 インストールの途中、「どうやってUbuntuをインストールしますか？」という項目で、すでにPCに入っているWindowsを消去するかどうか問われます。ここでは「Ubuntuを他のパーティションと並べてインストールする」を選択することをおすすめします。トラブルがあったときに対処しやすいよう、既存のWindowsも残しておきましょう。
 
-![](/blog/ubuntu-complite/how_do_you_install.png)
+![Ubuntuのインストール時に出てくる「どうやってUbuntuをインストールしますか？」の画面](/blog/ubuntu-complite/how_do_you_install.png)
 
 インストーラの最後の項目で、そこまでの選択を確認できます。入力・選択した内容をよく確認した上で、「インストール」ボタンを押します。
 
-![](/blog/ubuntu-complite/check_before_install.png)
+![Ubuntuのインストール準備が完了した様子](/blog/ubuntu-complite/check_before_install.png)
 
 しばらく待つと、Ubuntuのインストールが完了します。
 
-![](/blog/ubuntu-complite/install_completed.png)
+![Ubuntuのインストール完了画面](/blog/ubuntu-complite/install_completed.png)
 
 # Ubuntuでコンリテをやる
 Ubuntuにはコンリテの実習で使用する多くのツールがあらかじめインストールされているので、すぐに作業を始められます。画面右下のアイコンを押すとアプリ一覧が開くので、ここから「**端末**(Terminal)」を開きます。
 
-![](/blog/ubuntu-complite/terminal_icon.png)
-
-![](/blog/ubuntu-complite/terminal_window.png)
+![「端末」のアイコン](/blog/ubuntu-complite/terminal_icon.png)
 
 開くのは無機質なあずき色の画面ですが、ここにコマンドを入力することでPCを自由自在に操作できます。実際に、コンリテの前半の講義で扱うコマンドをいくつか実行してみましょう。
+
+![「端末」を開いたときの初期画面](/blog/ubuntu-complite/terminal_window.png)
 
 ネット上のコンピュータがリクエストに応答するまでに要する時間を計測する`ping`コマンドを実行します。`ping uec.ac.jp -c 4`と入力してエンターを押すと、以下のように測定結果が表示されます。
 
@@ -104,7 +104,7 @@ sciences
 
 サーバー側のウィンドウを自分の端末で開くときには、X Windowというプロトコルに従ってウィンドウの内容が転送されます。Windowsでこれを行うにはMobaXtermなどのソフトを導入する必要がありますが、Ubuntuにはこの通信を行う機能が内蔵されているため、特殊なセットアップなしでウィンドウを開くことができます。
 
-![](/blog/ubuntu-complite/complite_window.png)
+![コンリテで使用するウィンドウをいくつか開いた様子](/blog/ubuntu-complite/complite_window.png)
 
 # おわりに
 アドカレの割当日に大々遅刻した挙句、対象読者のよくわからない記事が錬成されてしまいました……え？これを今月もう3回やるんですか？勘弁してください
