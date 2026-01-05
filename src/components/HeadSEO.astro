@@ -8,6 +8,6 @@ const { type, title, ogImage } = Astro.props;
 <meta property="og:image" content={ ogImage ? ogImage : "https://github.com/ctes091x.png"} />
 <meta name="twitter:card" content={ type=="blog" ? "summary_large_image" : "summary"} />
 <meta name="twitter:title" content={title} />
-<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image" content={ ogImage ? ogImage : "https://github.com/ctes091x.png"} />
 <meta name="twitter:site" content="@ctes091x" />
 <meta name="twitter:creator" content="@ctes091x" />
