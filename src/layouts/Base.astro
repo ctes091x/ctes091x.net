@@ -1,0 +1,30 @@
+---
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import HeadSEO from "../components/HeadSEO.astro"
+
+const { type, title, ogImage } = Astro.props;
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
+---
+
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <title>{title} - 綿糸てせ{(type=="blog" ? "のブログ" : "")}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <HeadSEO type={type} title={title} ogImage={ogImage} />
+    <script src={bootstrap}></script>
+    <style is:global>img{max-width:100%;}</style>
+  </head>
+  <body>
+    <Header />
+    <main class="container my-4">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
