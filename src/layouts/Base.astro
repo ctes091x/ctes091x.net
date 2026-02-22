@@ -5,8 +5,8 @@ import HeadSEO from "../components/HeadSEO.astro"
 
 const { type, title, ogImage } = Astro.props;
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
 ---
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
     <title>{title} - 綿糸てせ{(type=="blog" ? "のブログ" : "")}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <HeadSEO type={type} title={title} ogImage={ogImage} />
-    <script src={bootstrap}></script>
+    <!--<script src={bootstrap}></script>-->
     <style is:global>img{max-width:100%;}</style>
   </head>
   <body>
