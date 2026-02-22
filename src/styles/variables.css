@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #eeeeee;
+  --color-text: #111111;
+  --color-text-secondary: #333333;
+  --color-primary: #1a99ed;
+  --color-secondary: #cccccc;
+  --font-base: sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #222222;
+    --color-bg-secondary: #333333;
+    --color-text: #ffffff;
+    --color-text-secondary: #999999;
+    --color-secondary: #333333;
+  }
+}

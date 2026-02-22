@@ -4,7 +4,6 @@ const { frontmatter } = Astro.props;
 ---
 
 <Base title={frontmatter.title} type="blog" ogImage={frontmatter.ogImage}>
-  <h1>{frontmatter.title}</h1>
   <slot />
 </Base>
 
