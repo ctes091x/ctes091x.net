@@ -10,6 +10,12 @@ body {
 }
 
 main {
+  width: 100%;
+  margin: 0;
+  padding: 0.8rem;
+}
+
+main > div {
   max-width: 960px;
   margin: auto;
 }
@@ -64,3 +70,21 @@ main li {
   margin-left: 4em;
 }
 
+main .astro-code {
+  padding: 1em 2em;
+}
+
+@media screen and (max-width: 1024px) {
+  main > div {
+    margin: 0 1em;
+  }
+
+  main p {
+    font-size: 1rem;
+  }
+
+  main li{
+    font-size: 1rem;
+    margin-left: 2em;
+  }
+}

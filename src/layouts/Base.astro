@@ -21,7 +21,9 @@ const { type, title, ogImage } = Astro.props;
   <body>
     <Header />
     <main>
-      <slot />
+      <div>
+        <slot />
+      </div>
     </main>
     <Footer />
   </body>

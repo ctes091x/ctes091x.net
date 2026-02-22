@@ -3,7 +3,7 @@
 header {
   width: 100%;
   margin: 0;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem;
   border-bottom: 1px solid var(--color-secondary);
 }
 
@@ -47,3 +47,13 @@ header a:hover {
   padding: 0.4rem;
 }
 
+
+@media screen and (max-width: 1024px) {
+  header > div {
+    margin: 0 1em;
+  }
+
+  .header-nav {
+    display: none;
+  }
+}

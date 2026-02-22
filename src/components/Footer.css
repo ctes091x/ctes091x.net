@@ -3,7 +3,7 @@
 footer {
   width: 100%;
   margin: 0;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem;
   border-top: 1px solid var(--color-secondary);
   color: var(--color-text-secondary);
 }
@@ -17,5 +17,9 @@ footer p {
   color: var(--color-text-secondary);
 }
 
-
+@media screen and (max-width: 1024px) {
+  footer > div {
+    margin: 0 1em;
+  }
+}
 
