@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-primary: #1a99ed;
+  --font-base: sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #222222;
+    --color-text: #ffffff;
+  }
+}

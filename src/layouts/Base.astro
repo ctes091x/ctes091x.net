@@ -3,10 +3,9 @@ import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import HeadSEO from "../components/HeadSEO.astro"
 
-const { type, title, ogImage } = Astro.props;
+import "../styles/global.css"
 
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
+const { type, title, ogImage } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -21,7 +20,7 @@ const { type, title, ogImage } = Astro.props;
   </head>
   <body>
     <Header />
-    <main class="container my-4">
+    <main>
       <slot />
     </main>
     <Footer />
