@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+header {
+  width: 100%;
+  margin: 0;
+  padding: 0.8rem 1.5rem;
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+header > div {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+header a:hover {
+  opacity: 0.8;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand img {
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav ul li {
+  display: inline-block;
+  padding: 0.4rem;
+}
+

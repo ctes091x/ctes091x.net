@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 0.8rem 1.5rem;
+  border-top: 1px solid var(--color-secondary);
+  color: var(--color-text-secondary);
+}
+
+footer > div {
+  max-width: 960px;
+  margin: auto;
+}
+
+footer p {
+  color: var(--color-text-secondary);
+}
+
+
+
