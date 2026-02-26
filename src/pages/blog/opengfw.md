@@ -5,8 +5,6 @@ author: '綿糸てせ (@ctes091x)'
 pubDate: 2025-12-09
 ---
 
-# グレートファイアウォールを自宅に建てよう
-
 この記事は[MMA Advent Calendar 2025](https://adventar.org/calendars/11429) 7日目の記事です。昨日は[tomolatoon](https://x.com/tomolatoon_tw)さんの「C++やろうぜ（環境構築記事）」でした。
 
 記事本文はまだ書いていません。
