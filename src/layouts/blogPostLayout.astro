@@ -1,26 +1,14 @@
 ---
 import Base from "./Base.astro";
+import BlogHeader from "../components/BlogHeader.astro";
 const { frontmatter } = Astro.props;
 const pubDate = new Date(frontmatter.pubDate);
 const modDate = new Date(frontmatter.pubDate);
-const pathname = Astro.url.pathname;
 ---
 
 <Base title={frontmatter.title} type="blog" ogImage={frontmatter.ogImage} >
   <article>
-    <header>
-      <h1>{frontmatter.title}</h1>
-      <div style="color:var(--color-text-secondary); text-align: right;">
-        <p style="margin: 0;">
-          <span>投稿日: <time datetime={pubDate.toISOString()}>{pubDate.toISOString().slice(0, 10)}</time></span>
-          <span>最終更新日: <time datetime={modDate.toISOString()}>{modDate.toISOString().slice(0, 10)}</time></span>
-        </p>
-        <p style="margin: 0;">
-          <span><a target="_blank" rel="noopener noreferrer" href={`https://x.com/intent/tweet?text=${encodeURIComponent(`${frontmatter.title} - 綿糸てせのブログ https://ctes091x.net${pathname}`)}`} >ツイート</a></span>
-          <span><a target="_blank" rel="noopener noreferrer" href={`https://github.com/ctes091x/ctes091x.net/blob/master/src/pages${pathname.endsWith("/") ? pathname.slice(0,-1) : pathname}.md`}>GitHubで見る</a></span>
-        </p>
-      </div>
-    </header>
+    <BlogHeader title={frontmatter.title} pubDate={pubDate} modDate={modDate} />
     <slot />
   </article>
 </Base>

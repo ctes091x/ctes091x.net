@@ -35,17 +35,13 @@ a:hover {
   opacity: 0.9;
 }
 
-main h1, main h2, main h3 {
+main h2, main h3 {
   transition: all 0.2s;
 }
 
 
-main h1:hover, main h2:hover, main h3:hover {
+main h2:hover, main h3:hover {
   opacity: 0.8;
-}
-
-main h1 {
-  margin: 0.8em 0;
 }
 
 main h2 {
