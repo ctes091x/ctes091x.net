@@ -6,8 +6,6 @@ pubDate: 2025-12-02
 ogImage: 'https://ctes091x.net/blog/ubuntu-complite/complite_window.png'
 ---
 
-# PCにUbuntuを入れて快適にコンリテをやろう
-
 この記事は[UEC25 Advent Calendar 2025 その1](https://adventar.org/calendars/11349) 2日目の記事です。昨日は[AI](https://x.com/AI_317aaaaaaa)さんの[今日は⚪︎⚪︎⚪︎⚪︎⚪︎⚪︎の誕生日](https://note.com/ai_317aaaaaaa/n/n79c63005c02a)でした。
 
 ## はじめに
