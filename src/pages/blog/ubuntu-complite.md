@@ -3,6 +3,7 @@ layout: ../../layouts/blogPostLayout.astro
 title: 'PCにUbuntuを入れて快適にコンリテをやろう'
 author: '綿糸てせ (@ctes091x)'
 pubDate: 2025-12-02
+modDate: 2025-12-03
 ogImage: 'https://ctes091x.net/blog/ubuntu-complite/complite_window.png'
 ---
 

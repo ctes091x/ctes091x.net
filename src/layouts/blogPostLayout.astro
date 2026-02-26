@@ -3,7 +3,7 @@ import Base from "./Base.astro";
 import BlogHeader from "../components/BlogHeader.astro";
 const { frontmatter } = Astro.props;
 const pubDate = new Date(frontmatter.pubDate);
-const modDate = new Date(frontmatter.pubDate);
+const modDate = new Date(frontmatter.modDate);
 ---
 
 <Base title={frontmatter.title} type="blog" ogImage={frontmatter.ogImage} >

@@ -2,7 +2,8 @@
 layout: ../../layouts/blogPostLayout.astro
 title: '電通大の基礎プログラミングの単位を高校生のうちに取ろう'
 author: '綿糸てせ (@ctes091x)'
-pubDate: 2025-12-09
+pubDate: 2025-12-16
+modDate: 2025-12-16
 ogImage: 'https://ctes091x.net/blog/kodai-fpro/presenter.jpg'
 ---
 
