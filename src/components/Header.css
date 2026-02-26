@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-header {
+.page-header {
   width: 100%;
   margin: 0;
   padding: 0.8rem;
   border-bottom: 1px solid var(--color-secondary);
 }
 
-header > div {
+.page-header > div {
   max-width: 960px;
   margin: auto;
   display: flex;
@@ -15,13 +15,13 @@ header > div {
   justify-content: space-between;
 }
 
-header a {
+.page-header a {
   color: var(--color-text);
   text-decoration: none;
   transition: opacity 0.2s;
 }
 
-header a:hover {
+.page-header a:hover {
   opacity: 0.8;
 }
 
@@ -49,7 +49,7 @@ header a:hover {
 
 
 @media screen and (max-width: 1024px) {
-  header > div {
+  .page-header > div {
     margin: 0 1em;
   }
 }
