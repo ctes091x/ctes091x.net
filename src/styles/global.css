@@ -100,7 +100,7 @@ main table {
 
 main table th, main table td {
   padding: 0.5em;
-  border: 1px solid var(--color-text-secondary);
+  border: 1px solid var(--color-bg-secondary);
 }
 
 main table thead tr {
