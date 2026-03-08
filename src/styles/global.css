@@ -107,6 +107,11 @@ main table thead tr {
   background: var(--color-bg-secondary);
 }
 
+main img {
+  margin: auto;
+  text-align: center;
+}
+
 
 @media screen and (max-width: 1024px) {
   main > div {
