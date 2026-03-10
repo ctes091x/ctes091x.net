@@ -1,0 +1,28 @@
+---
+import "./ReciprocalLinks.css";
+
+const links = [
+  { name: "しおり🔖", url: "https://shiori-02-14.github.io/Homepage/", iconId: "x/shiori_02_14_", desc: "早くAndroidユーザにもNEXUS使わせてください" },
+  { name: "柴犬被り", url: "https://memo.shibadogcap.com/", iconId: "github/shibadogcap", desc: "UEC25あつまれ〜の創設者。徒歩するぞ！！" },
+  { name: "トラマト", url: "https://toramutton.me/", iconId: "x/ToraMutton", desc: "ユーモア溢れる超有能記事をいつもありがとう" },
+  { name: "ThunFasky", url: "https://thunfasky.com/", iconId: "x/ThunFasky", desc: "絵描ける人類のサイト、お洒落すぎてずるい" },
+  { name: "こっとん", url: "https://cotton7.me/", iconId: "x/cotton_tech7", desc: "レートよこせ〜" },
+  { name: "あなた", url: "https://blog.lizelit.workers.dev/", iconId: "x/anata_lit", desc: "Roil良き！" },
+  { name: "コメネズミ", url: "https://komenezumi.net/", iconId: "x/komenezumi1006", desc: "高校同期。つよつよ自宅鯖いいね" },
+];
+---
+
+<ul class="reciprocal-link">
+  {links.map(link => (
+      <li class="reciprocal-link-card">
+        <a href={link.url} target="_blank">
+          <img src={"https://unavatar.io/" + link.iconId} />
+          <div>
+            <span class="name">{link.name}</span>
+            <span class="desc">{link.desc}</span>
+          </div>
+        </a>
+      </li>
+  ))}
+</ul>
+

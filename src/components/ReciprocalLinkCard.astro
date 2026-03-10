@@ -1,0 +1,14 @@
+---
+import "./ReciprocalLinkCard.css";
+const { name, url, iconId, desc } = Astro.props;
+---
+
+<li class="reciprocal-link-card">
+  <a href={url} target="_blank">
+    <img src={"https://unavatar.io/" + iconId} />
+    <div>
+      <span class="name">{name}</span>
+      <span class="desc">{desc}</span>
+    </div>
+  </a>
+</li>
