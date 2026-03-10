@@ -1,5 +1,5 @@
 ---
-import ReciprocalLinkCard from "./ReciprocalLinkCard.astro";
+import "./ReciprocalLinks.css";
 
 const links = [
   { name: "しおり🔖", url: "https://shiori-02-14.github.io/Homepage/", iconId: "x/shiori_02_14_", desc: "早くAndroidユーザにもNEXUS使わせてください" },
@@ -7,13 +7,22 @@ const links = [
   { name: "トラマト", url: "https://toramutton.me/", iconId: "x/ToraMutton", desc: "ユーモアに溢れる超有能記事をいつもありがとう" },
   { name: "ThunFasky", url: "https://thunfasky.com/", iconId: "x/ThunFasky", desc: "お洒落すぎないか？？？" },
   { name: "こっとん", url: "https://cotton7.me/", iconId: "x/cotton_tech7", desc: "レートよこせ〜" },
-  { name: "コメネズミ", url: "https://komenezumi.net/", iconId: "x/komenezumi1006", desc: "高校同期。つよつよ自宅鯖いいね" }
+  { name: "あなた", url: "https://blog.lizelit.workers.dev/", iconId: "x/anata_lit", desc: "Roil良き！" },
+  { name: "コメネズミ", url: "https://komenezumi.net/", iconId: "x/komenezumi1006", desc: "つよつよ自宅鯖いいね" },
 ];
 ---
 
-<ul>
+<ul class="reciprocal-link">
   {links.map(link => (
-      <ReciprocalLinkCard name={link.name} url={link.url} iconId={link.iconId} desc={link.desc} />
+      <li class="reciprocal-link-card">
+        <a href={link.url} target="_blank">
+          <img src={"https://unavatar.io/" + link.iconId} />
+          <div>
+            <span class="name">{link.name}</span>
+            <span class="desc">{link.desc}</span>
+          </div>
+        </a>
+      </li>
   ))}
 </ul>
 
