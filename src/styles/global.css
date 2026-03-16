@@ -115,6 +115,9 @@ main img {
   margin: auto;
   text-align: center;
   max-height: 640px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 
