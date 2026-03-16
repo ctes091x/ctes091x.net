@@ -1,0 +1,13 @@
+---
+const { title, url, ogImage, pubDate } = Astro.props;
+---
+
+<li class="card blog-post-card">
+  <a href={url}>
+    <img src={ogImage} />
+    <div>
+      <span class="title">{title}</span>
+      <span class="pub-date">{pubDate}</span>
+    </div>
+  </a>
+</li>

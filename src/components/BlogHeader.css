@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-.blog-header h1 {
-
-}
-
 .header-contents {
   color:var(--color-text-secondary);
   text-align: right;
