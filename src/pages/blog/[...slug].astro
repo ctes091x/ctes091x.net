@@ -21,7 +21,7 @@ const { Content } = await post.render();
 <BlogPostLayout frontmatter={{
   title: post.data.title,
   pubDate: post.data.pubDate,
-  modDate: post.data.modDate,
+  modDate: post.data.modDate || undefined,
   ogImage: post.data.ogImage || undefined
 }}>
   <Content />

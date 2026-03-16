@@ -9,7 +9,7 @@ const pathname = Astro.url.pathname;
   <div class="header-contents">
     <p>
       <span>投稿日: <time datetime={pubDate.toISOString()}>{pubDate.toISOString().slice(0, 10)}</time></span><wbr>
-      <span>最終更新日: <time datetime={modDate.toISOString()}>{modDate.toISOString().slice(0, 10)}</time></span>
+      { !isNaN (modDate) && (<span>最終更新日: <time datetime={modDate.toISOString()}>{modDate.toISOString().slice(0, 10)}</time></span>)}
     </p>
     <p>
     <span>
