@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/blogPostLayout.astro
 title: "Androidで学内限定ページを見るときはSSH Dynamic Port-Forwardingを使う【#電通大はAndroidでVPNを使わせろ】"
 author: '綿糸てせ (@ctes091x)'
 pubDate: 2026-03-15

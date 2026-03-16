@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/blogPostLayout.astro
 title: '【Arch+niri+chezmoi】開発環境現状確認 2026-02'
 author: '綿糸てせ (@ctes091x)'
 pubDate: 2026-02-25
