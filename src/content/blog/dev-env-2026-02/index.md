@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/blogPostLayout.astro
 title: '【Arch+niri+chezmoi】開発環境現状確認 2026-02'
 author: '綿糸てせ (@ctes091x)'
 pubDate: 2026-02-25
@@ -10,7 +9,7 @@ ogImage: 'https://ctes091x.net/blog/dev-env-2026-02/whole-desktop-features.png'
 ## はじめに
 Arch Linuxを常用するようになってから約4ヶ月が経過しました。春の長期休暇を機に[dotfiles](https://github.com/ctes091x/dotfiles)をNixに移行しようとしているので、一旦現状の環境の振り返りをしたいと思います。
 
-![デスクトップ環境の概況](/blog/dev-env-2026-02/whole-desktop-features.png)
+![デスクトップ環境の概況](./whole-desktop-features.png)
 
 
 ## マシン・OS
@@ -36,7 +35,7 @@ MMAの合宿中にUbuntuをインストールしている様子↓
 
 推奨セットアップに[Dank Material Shell](https://github.com/AvengeMedia/DankMaterialShell)というデスクトップシェルが入っていたのでこれも使っています。いい感じのステータスバーを特段の設定なしで出してくれるのでありがたいです。
 
-![Dank Material Shellのいい感じのステータスバー](/blog/dev-env-2026-02/dank-widget.png)
+![Dank Material Shellのいい感じのステータスバー](./dank-widget.png)
 
 
 ## 環境のセットアップ
@@ -70,7 +69,7 @@ MMAの合宿中にUbuntuをインストールしている様子↓
 ### ターミナルエミュレータ: foot
 当初はniriの推奨になっていたAlacrittyを使用していましたが、[名無し。](https://sevenc7c.com)さんのプロフィールを画像付きで表示したかったため、Sixelフォーマットによる画像表示に対応したfootに乗り換えました。
 
-![Sixelによって画像を表示したfootの画面](/blog/dev-env-2026-02/sixel.png)
+![Sixelによって画像を表示したfootの画面](./sixel.png)
 
 Catppuccin Mochaテーマを適用しています。[Sauce Code Pro Nerd Font](https://www.nerdfonts.com/font-downloads#:~:text=Source%20Code%20Pro)を使用しており、Neovimやtmuxのステータスラインをいい感じに表示できています。
 
@@ -97,7 +96,7 @@ bind h split-window -v -c '#{pane_current_path}'
 
 プラグインマネージャはVimの頃からの惰性でvim-plugを使用しています。ステータスラインはlualine、ファイラーはFernを使用しています。
 
-![Neovimでこの記事を編集している様子](/blog/dev-env-2026-02/neovim.png)
+![Neovimでこの記事を編集している様子](./neovim.png)
 
 [Vimでテトリス](https://www.vim.org/scripts/script.php?script_id=172)をやりまくっていたおかげでhjklキーによるカーソル移動にはかなり慣れられましたが、このスクリプトはNeovimでは正常に動作しないため、これをやるためだけに今もVimを残しています。
 

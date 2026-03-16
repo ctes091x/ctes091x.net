@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: block;
+  margin: 0.5em;
+  border: 1px solid var(--color-bg-secondary);
+  border-radius: 0.5em;
+  width: calc(50% - 1em);
+  overflow: hidden;
+}
+
+.card-sm {
+  width: 30%;
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    width: calc(50% - 1em);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .card-wrapper {
+    display: block;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0.5em auto;
+  }
+}

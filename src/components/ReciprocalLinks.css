@@ -1,18 +1,5 @@
 @charset "UTF-8";
 
-.reciprocal-link {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.reciprocal-link-card {
-  display: block;
-  width: 30%;
-  margin: 0.5em;
-  border: 1px solid var(--color-bg-secondary);
-  border-radius: 0.5em;
-}
-
 .reciprocal-link-card a {
   display: flex;
   justify-content: flex-start;
@@ -50,20 +37,4 @@
 }
 
 
-@media screen and (max-width: 1024px) {
-  .reciprocal-link-card {
-    width: calc(50% - 1em);
-  }
-}
-
-@media screen and (max-width: 680px) {
-  .reciprocal-link {
-    display: block;
-  }
-
-  .reciprocal-link-card {
-    width: 100%;
-    margin: 0.5em auto;
-  }
-}
 

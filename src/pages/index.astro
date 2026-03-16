@@ -1,12 +1,17 @@
 ---
 import Base from "../layouts/Base.astro";
 import ReciprocalLinks from "../components/ReciprocalLinks.astro";
+
+import { getCollection } from "astro:content";
+const posts = await getCollection("blog");
+posts.sort((a, b) => b.data.pubDate - a.data.pubDate);
 ---
+
 <Base title="トップページ">
-  <h1 class="mb-4">綿糸てせ (@ctes091x)</h1>
-  <section class="mb-3">
-    <h2 class="mb-3" id="about">About</h2>
-    <h3 class="h4">Affiliation</h3>
+  <h1>綿糸てせ (@ctes091x)</h1>
+  <section>
+    <h2 id="about">About</h2>
+    <h3>Affiliation</h3>
     <ul>
       <li>
         電気通信大学 情報理工学域 I類 (2025~)
@@ -20,8 +25,21 @@ import ReciprocalLinks from "../components/ReciprocalLinks.astro";
       </li>
     </ul>
   </section>
-  <section class="mb-3">
-    <h2 class="mb-3" id="links">Links</h2>
+  <section>
+    <h2>Recent Posts</h2>
+    <ul>
+      {posts.slice(0, 5).map(post => (!post.data.draft &&
+      <li>
+        <a href={`/blog/${post.slug}`}>
+          {post.data.title}
+        </a>
+      </li>
+      ))}
+    </ul>
+    <p><a href="blog/">View more...</a></p>
+  </section>
+  <section>
+    <h2 id="links">Links</h2>
     <ul>
       <li>Twitter: <a href="https://twitter.com/ctes091x">@ctes091x</a></li>
       <li>GitHub: <a href="https://github.com/ctes091x">@ctes091x</a></li>
@@ -31,8 +49,8 @@ import ReciprocalLinks from "../components/ReciprocalLinks.astro";
       <li>Blog: <a href="blog/">https://ctes091x.net/blog/</a></li>
     </ul>
   </section>
-  <section class="mb-3">
-    <h2 class="mb-3">Reciprocal Links</h2>
+  <section>
+    <h2>Reciprocal Links</h2>
     <ReciprocalLinks />
   </section>
 </Base>

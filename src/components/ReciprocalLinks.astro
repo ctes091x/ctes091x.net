@@ -1,5 +1,6 @@
 ---
 import "./ReciprocalLinks.css";
+import "./Card.css"
 
 const links = [
   { name: "しおり🔖", url: "https://shiori-02-14.github.io/Homepage/", iconId: "x/shiori_02_14_", desc: "早くAndroidユーザにもNEXUS使わせてください" },
@@ -9,12 +10,12 @@ const links = [
   { name: "こっとん", url: "https://cotton7.me/", iconId: "x/cotton_tech7", desc: "レートよこせ〜" },
   { name: "あなた", url: "https://blog.lizelit.workers.dev/", iconId: "x/anata_lit", desc: "Roil良き！" },
   { name: "コメネズミ", url: "https://komenezumi.net/", iconId: "x/komenezumi1006", desc: "高校同期。つよつよ自宅鯖いいね" },
-];
+  ] //.sort(() => Math.random() - 0.5);
 ---
 
-<ul class="reciprocal-link">
+<ul class="card-wrapper">
   {links.map(link => (
-      <li class="reciprocal-link-card">
+      <li class="card reciprocal-link-card card-sm">
         <a href={link.url} target="_blank">
           <img src={"https://unavatar.io/" + link.iconId} />
           <div>
