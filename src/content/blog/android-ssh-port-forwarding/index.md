@@ -2,7 +2,7 @@
 title: "Androidで学内限定ページを見るときはSSH Dynamic Port-Forwardingを使う【#電通大はAndroidでVPNを使わせろ】"
 author: '綿糸てせ (@ctes091x)'
 pubDate: 2026-03-15
-ogImage: 'https://ctes091x.net/blog/android-ssh-port-forwarding/ogimage.png'
+ogImage: 'https://ctes091x.net/og/android-ssh-port-forwarding.png'
 ---
 
 この記事は [電気通信大学MMA ブログリレー](https://wiki.mma.club.uec.ac.jp/BlogRelay) の5週目の記事です。先週の記事はまだ投稿されていません。

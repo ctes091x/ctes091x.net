@@ -3,7 +3,7 @@ title: '【Arch+niri+chezmoi】開発環境現状確認 2026-02'
 author: '綿糸てせ (@ctes091x)'
 pubDate: 2026-02-25
 modDate: 2026-02-26
-ogImage: 'https://ctes091x.net/blog/dev-env-2026-02/whole-desktop-features.png'
+ogImage: 'https://ctes091x.net/og/dev-env-2026-02.png'
 ---
 
 ## はじめに

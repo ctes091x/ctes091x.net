@@ -3,7 +3,7 @@ title: '電通大の基礎プログラミングの単位を高校生のうちに
 author: '綿糸てせ (@ctes091x)'
 pubDate: 2025-12-16
 modDate: 2025-12-16
-ogImage: 'https://ctes091x.net/blog/kodai-fpro/presenter.jpg'
+ogImage: 'https://ctes091x.net/og/kodai-fpro.jpg'
 ---
 
 この記事は[UEC25 その4 Advent Calendar 2025](https://adventar.org/calendars/12028) 16日目の記事です。昨日は[しろまる](https://x.com/Shiroimaru_1)さんの「[神話生物達と家族ごっこをしてみよう！](https://note.com/shiroimaru_1/n/n38e770d656a5)」でした。

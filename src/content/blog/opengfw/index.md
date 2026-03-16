@@ -2,7 +2,7 @@
 title: 'グレートファイアウォールを自宅に建てよう'
 author: '綿糸てせ (@ctes091x)'
 pubDate: 2025-12-08
-ogImage: "https://ctes091x.net/blog/opengfw/ogimage.png"
+ogImage: "https://ctes091x.net/og/opengfw.png"
 draft: true
 ---
 
