@@ -16,7 +16,7 @@ const pathname = Astro.url.pathname;
       <a target="_blank" rel="noopener noreferrer" href={`https://x.com/intent/tweet?text=${encodeURIComponent(`${title} - 綿糸てせのブログ`)}&url=${encodeURIComponent(`https://ctes091x.net${pathname}`)}`} >ツイート</a></span>
     </span>
     <span>
-      <a target="_blank" rel="noopener noreferrer" href={`https://github.com/ctes091x/ctes091x.net/blob/master/src/pages${pathname.endsWith("/") ? pathname.slice(0,-1) : pathname}.md`}>GitHubで見る</a>
+      <a target="_blank" rel="noopener noreferrer" href={`https://github.com/ctes091x/ctes091x.net/blob/master/src/content/${pathname.endsWith("/") ? pathname.slice(0,-1) : pathname}/index.md`}>GitHubで見る</a>
     </span>
     </p>
   </div>
