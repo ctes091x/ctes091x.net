@@ -13,5 +13,7 @@ npm run dev
 npm run dev -- --host
 ```
 
-All articles on my website is licensed under [CC-BY](./LICENSE).
+
+## License
+All articles on my website are licensed under [CC BY-SA](./LICENSE-CC-BY-SA), and source code is licensed under [MIT License](./LICENSE-MIT)
 
