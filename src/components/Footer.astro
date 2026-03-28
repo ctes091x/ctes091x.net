@@ -1,14 +1,38 @@
 ---
-import "./Footer.css"
+// import "./Footer.css"
 ---
 
-<footer>
-  <div>
+<footer class="
+  w-full border-t backdrop-blur sticky top-0 z-50
+  border-gray-200 dark:border-gray-700 
+  bg-white-70 dark:bg-gray-900
+  text-gray-500
+">
+  <div class="max-w-5xl mx-auto px-4 py-4 text-sm leading-relaxed">
     <p>
-    &copy; <span itemprop="copyrightHolder">ctes091x</span>, 2026 | Built with <a href="https://astro.build" class="link-secondary">Astro</a>.
+      &copy; <span itemprop="copyrightHolder">ctes091x</span>, 2026 | 
+      Built with 
+      <a href="https://astro.build" 
+        class="
+          text-gray-600 dark:text-gray-400
+          hover:text-black dark:hover:text-white
+          underline underline-offset-2 transition
+        ">
+        Astro
+      </a>.
     </p>
-    <p>
-      特に記載のない限り、本サイトの内容は <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" itemprop="license">クリエイティブ・コモンズ 表示-継承 4.0 国際</a> の下で提供されています。
+    <p class="mt-2">
+      特に記載のない限り、本サイトの内容は 
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" itemprop="license"
+        class="
+          text-gray-600 dark:text-gray-400
+          hover:text-black dark:hover:text-white
+          underline underline-offset-2 transition
+        ">
+        クリエイティブ・コモンズ 表示-継承 4.0 国際
+      </a> 
+      の下で提供されています。
     </p>
+
   </div>
 </footer>

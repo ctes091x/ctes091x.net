@@ -8,7 +8,7 @@ const modDate = new Date(frontmatter.modDate);
 ---
 
 <Base title={frontmatter.title} type="blog" ogImage={frontmatter.ogImage} >
-  <article>
+  <article class="prose dark:prose-invert max-w-full">
     <BlogHeader title={frontmatter.title} pubDate={pubDate} modDate={modDate} />
     <slot />
   </article>

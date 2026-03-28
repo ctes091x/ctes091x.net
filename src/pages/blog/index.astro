@@ -2,8 +2,8 @@
 import Base from "../../layouts/Base.astro";
 
 import BlogPostCard from "../../components/BlogPostCard.astro";
-import "../../components/Card.css";
-import "../../components/BlogPostCard.css";
+// import "../../components/Card.css";
+// import "../../components/BlogPostCard.css";
 
 import { getCollection } from "astro:content";
 const posts = await getCollection("blog");
@@ -12,7 +12,7 @@ posts.sort((a, b) => b.data.pubDate - a.data.pubDate);
 
 <Base title="ブログ">
   <h1>綿糸てせのブログ</h1>
-  <ul class="card-wrapper">
+  <ul>
     {posts.map(post => (!post.data.draft &&
       <BlogPostCard title={post.data.title} url={`/blog/${post.slug}`} ogImage={post.data.ogImage} pubDate={post.data.pubDate.toISOString().slice(0, 10)} />
     ))}

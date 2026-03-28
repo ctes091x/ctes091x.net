@@ -1,20 +1,20 @@
----
-import "./Header.css"
----
-
-<header class="page-header">
-  <div>
-    <a href="/" class="brand">
-      <img src="https://github.com/ctes091x.png" width="40" alt="Icon">
-      <span>@ctes091x</span>
+<header class="
+  w-full border-b sticky top-0 z-50
+  border-gray-200 dark:border-gray-700 
+  bg-white dark:bg-gray-900
+">
+  <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="/" class="flex items-center gap-2 text-gray-800 dark:text-gray-100 hover:opacity-80 transition">
+      <img src="https://github.com/ctes091x.png" alt="Icon" class="w-10 h-10 rounded-full" />
+      <span class="font-medium tracking-tight">@ctes091x</span>
     </a>
-    <div class="header-nav">
-      <ul>
-        <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="/#about" class="nav-link">About</a></li>
-        <li><a href="/#links" class="nav-link">Links</a></li>
-        <li><a href="/blog/" class="nav-link">Blog</a></li>
+    <nav class="hidden sm:block">
+      <ul class="flex items-center text-sm text-gray-700 dark:text-gray-200">
+        <li><a href="/" class="px-3 py-2 hover:text-black dark:hover:text-white transition">Home</a></li>
+        <li><a href="/#about" class="px-3 py-2 hover:text-black dark:hover:text-white transition">About</a></li>
+        <li><a href="/#links" class="px-3 py-2 hover:text-black dark:hover:text-white transition">Links</a></li>
+        <li><a href="/blog/" class="px-3 py-2 hover:text-black dark:hover:text-white transition">Blog</a></li>
       </ul>
-    </div>
+    </nav>
   </div>
 </header>
