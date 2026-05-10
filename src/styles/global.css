@@ -26,10 +26,10 @@ main p {
   margin: 1em 0;
 }
 
-a {
-  color: var(--color-primary);
+main a {
+  color: var(--color-text);
   transition: all 0.2s;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 main a:hover {

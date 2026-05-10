@@ -17,6 +17,11 @@ footer p {
   color: var(--color-text-secondary);
 }
 
+footer a {
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1024px) {
   footer > div {
     margin: 0 1em;
