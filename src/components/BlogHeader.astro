@@ -8,13 +8,13 @@ const pathname = Astro.url.pathname;
   <h1>{title}</h1>
   <div class="header-contents">
     <p>
-      <span>投稿日: <time datetime={pubDate.toISOString()}>{pubDate.toISOString().slice(0, 10)}</time></span><wbr>
+      <span>投稿日: <time datetime={pubDate.toISOString()}>{pubDate.toISOString().slice(0, 10)}</time></span><wbr>{" "}
       { !isNaN (modDate) && (<span>最終更新日: <time datetime={modDate.toISOString()}>{modDate.toISOString().slice(0, 10)}</time></span>)}
     </p>
     <p>
     <span>
-      <a target="_blank" rel="noopener noreferrer" href={`https://x.com/intent/tweet?text=${encodeURIComponent(`${title} - 綿糸てせのブログ`)}&url=${encodeURIComponent(`https://ctes091x.net${pathname}`)}`} >ツイート</a></span>
-    </span>
+      <a target="_blank" rel="noopener noreferrer" href={`https://x.com/intent/tweet?text=${encodeURIComponent(`${title} - 綿糸てせのブログ`)}&url=${encodeURIComponent(`https://ctes091x.net${pathname}`)}`} >ツイート</a>
+    </span>{" "}
     <span>
       <a target="_blank" rel="noopener noreferrer" href={`https://github.com/ctes091x/ctes091x.net/blob/master/src/content/${pathname.endsWith("/") ? pathname.slice(0,-1) : pathname}/index.md`}>GitHubで見る</a>
     </span>

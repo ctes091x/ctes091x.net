@@ -31,7 +31,7 @@ posts.sort((a, b) => b.data.pubDate - a.data.pubDate);
     <ul>
       {posts.slice(0, 5).map(post => (!post.data.draft &&
       <li>
-        <a href={`/blog/${post.slug}`}>
+        <a href={`/blog/${post.id}`}>
           {post.data.title}
         </a>
       </li>
