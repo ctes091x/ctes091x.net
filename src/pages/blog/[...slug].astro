@@ -1,12 +1,12 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 
 // 各記事ページを生成するためのパスを定義
 export async function getStaticPaths() {
   const posts = await getCollection("blog"); // "blog" コレクションを取得
   return posts.map(post => ({
-    params: { slug: post.slug }, // URLのslug
+    params: { slug: post.id }, // URLのslug
     props: { post },            // ページに渡すプロップス
   }));
 }
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 
 // Markdown をレンダリングする
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <BlogPostLayout frontmatter={{

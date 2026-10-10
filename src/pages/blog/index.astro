@@ -14,7 +14,7 @@ posts.sort((a, b) => b.data.pubDate - a.data.pubDate);
   <h1>綿糸てせのブログ</h1>
   <ul class="card-wrapper">
     {posts.map(post => (!post.data.draft &&
-      <BlogPostCard title={post.data.title} url={`/blog/${post.slug}`} ogImage={post.data.ogImage} pubDate={post.data.pubDate.toISOString().slice(0, 10)} />
+      <BlogPostCard title={post.data.title} url={`/blog/${post.id}`} ogImage={post.data.ogImage} pubDate={post.data.pubDate.toISOString().slice(0, 10)} />
     ))}
   </ul>
 </Base>
