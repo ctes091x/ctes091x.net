@@ -34,12 +34,12 @@ const linkClass = "underline decoration-accent/50 underline-offset-4 transition-
       <img src="https://github.com/ctes091x.png" width="80" height="80" alt="" class="size-20 rounded-full" />
       <div>
         <h1 class="text-3xl font-bold tracking-tight">綿糸てせ</h1>
-        <p class="mt-1 text-zinc-500 dark:text-zinc-400">@ctes091x</p>
+        <p class="mt-1 text-ctp-subtext0">@ctes091x</p>
       </div>
     </div>
 
     <Section title="About" id="about">
-      <h3 class="mb-2 text-sm font-semibold tracking-wide text-zinc-500 uppercase dark:text-zinc-400">Affiliation</h3>
+      <h3 class="mb-2 text-sm font-semibold tracking-wide text-ctp-subtext0 uppercase">Affiliation</h3>
       <p class="font-medium">電気通信大学 情報理工学域 I類 (2025~)</p>
       <ul class="mt-2 list-disc space-y-1 pl-5 marker:text-accent">
         {clubs.map(club => <li>{club}</li>)}
@@ -47,10 +47,10 @@ const linkClass = "underline decoration-accent/50 underline-offset-4 transition-
     </Section>
 
     <Section title="Recent Posts">
-      <ul class="divide-y divide-zinc-200 dark:divide-zinc-800">
+      <ul class="divide-y divide-ctp-surface0">
         {recentPosts.map(post => (
           <li class="flex flex-col gap-x-4 py-2.5 sm:flex-row sm:items-baseline">
-            <time datetime={post.data.pubDate.toISOString()} class="shrink-0 text-sm text-zinc-500 tabular-nums dark:text-zinc-400">
+            <time datetime={post.data.pubDate.toISOString()} class="shrink-0 text-sm text-ctp-subtext0 tabular-nums">
               {formatDate(post.data.pubDate)}
             </time>
             <a href={`/blog/${post.id}/`} class={linkClass}>{post.data.title}</a>
@@ -58,14 +58,14 @@ const linkClass = "underline decoration-accent/50 underline-offset-4 transition-
         ))}
       </ul>
       <p class="mt-4">
-        <a href="/blog/" class="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">すべての記事 →</a>
+        <a href="/blog/" class="text-sm font-medium text-ctp-subtext0 transition-colors hover:text-ctp-text">すべての記事 →</a>
       </p>
     </Section>
 
     <Section title="Links" id="links">
       <dl class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2">
         {links.map(({ label, href, text }) => (
-          <dt class="text-zinc-500 dark:text-zinc-400">{label}</dt>
+          <dt class="text-ctp-subtext0">{label}</dt>
           <dd class="min-w-0 break-words"><a href={href} class={linkClass}>{text}</a></dd>
         ))}
       </dl>

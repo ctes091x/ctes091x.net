@@ -10,8 +10,8 @@ export default defineConfig({
     shikiConfig: {
       // ライト/ダークの両テーマを出力し、global.css 側で切り替える
       themes: {
-        light: 'github-light',
-        dark: 'github-dark',
+        light: 'catppuccin-latte',
+        dark: 'catppuccin-mocha',
       },
     },
   },
