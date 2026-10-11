@@ -16,14 +16,11 @@ const { type, title, ogImage } = Astro.props;
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <HeadSEO type={type} title={title} ogImage={ogImage} />
   </head>
-  <body>
+  <body class="flex min-h-dvh flex-col bg-white text-zinc-800 antialiased dark:bg-zinc-900 dark:text-zinc-200">
     <Header />
-    <main>
-      <div>
-        <slot />
-      </div>
+    <main class="page-container flex-1 py-10">
+      <slot />
     </main>
     <Footer />
   </body>
 </html>
-

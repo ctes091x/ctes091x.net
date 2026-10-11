@@ -1,58 +1,78 @@
 ---
 import Base from "../layouts/Base.astro";
+import Section from "../components/Section.astro";
 import ReciprocalLinks from "../components/ReciprocalLinks.astro";
+import { getPublishedPosts, formatDate } from "../lib/posts";
 
-import { getCollection } from "astro:content";
-const posts = await getCollection("blog");
-posts.sort((a, b) => b.data.pubDate - a.data.pubDate);
+const recentPosts = (await getPublishedPosts()).slice(0, 5);
+
+const clubs = [
+  "SF研究会 (電気通信大学学友会準公認)",
+  "MMA (電気通信大学公認)",
+  "工学研究部 (電気通信大学公認)",
+  "文芸・文学総合研究会 (電気通信大学公認)",
+  "UEComic! 準備会 (電気通信大学学友会準公認)",
+  "バーチャルライブ研究会 (電気通信大学公認)",
+];
+
+const links = [
+  { label: "Blog", href: "/blog/", text: "https://ctes091x.net/blog/" },
+  { label: "Twitter", href: "https://twitter.com/ctes091x", text: "@ctes091x" },
+  { label: "Bluesky", href: "https://bsky.app/profile/bsky.ctes091x.net", text: "bsky.ctes091x.net" },
+  { label: "GitHub", href: "https://github.com/ctes091x", text: "@ctes091x" },
+  { label: "Qiita", href: "https://qiita.com/users/ctes091x", text: "@ctes091x" },
+  { label: "Zenn", href: "https://zenn.dev/ctes091x", text: "@ctes091x" },
+  { label: "Keybase", href: "https://keybase.io/ctes091x", text: "@ctes091x" },
+];
+
+const linkClass = "underline decoration-accent/50 underline-offset-4 transition-colors hover:decoration-accent";
 ---
 
 <Base title="トップページ">
-  <h1>綿糸てせ (@ctes091x)</h1>
-  <section>
-    <h2 id="about">About</h2>
-    <h3>Affiliation</h3>
-    <ul>
-      <li>
-        電気通信大学 情報理工学域 I類 (2025~)
-        <ul>
-          <li>SF研究会 (電気通信大学学友会準公認)</li>
-          <li>MMA (電気通信大学公認)</li>
-          <li>工学研究部 (電気通信大学公認)</li>
-          <li>文芸・文学総合研究会 (電気通信大学公認)</li>
-          <li>UEComic! 準備会 (電気通信大学学友会準公認)</li>
-          <li>バーチャルライブ研究会 (電気通信大学公認)</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-  <section>
-    <h2>Recent Posts</h2>
-    <ul>
-      {posts.slice(0, 5).map(post => (!post.data.draft &&
-      <li>
-        <a href={`/blog/${post.id}`}>
-          {post.data.title}
-        </a>
-      </li>
-      ))}
-    </ul>
-    <p><a href="blog/">View more...</a></p>
-  </section>
-  <section>
-    <h2 id="links">Links</h2>
-    <ul>
-      <li>Blog: <a href="blog/">https://ctes091x.net/blog/</a></li>
-      <li>Twitter: <a href="https://twitter.com/ctes091x">@ctes091x</a></li>
-      <li>Bluesky: <a href="https://bsky.app/profile/bsky.ctes091x.net">bsky.ctes091x.net</a></li>
-      <li>GitHub: <a href="https://github.com/ctes091x">@ctes091x</a></li>
-      <li>Qiita: <a href="https://qiita.com/users/ctes091x">@ctes091x</a></li>
-      <li>Zenn: <a href="https://zenn.dev/ctes091x">@ctes091x</a></li>
-      <li>Keybase: <a href="https://keybase.io/ctes091x">@ctes091x</a></li>
-    </ul>
-  </section>
-  <section>
-    <h2>Reciprocal Links</h2>
-    <ReciprocalLinks />
-  </section>
+  <div class="space-y-14">
+    <div class="flex items-center gap-5">
+      <img src="https://github.com/ctes091x.png" width="80" height="80" alt="" class="size-20 rounded-full" />
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight">綿糸てせ</h1>
+        <p class="mt-1 text-zinc-500 dark:text-zinc-400">@ctes091x</p>
+      </div>
+    </div>
+
+    <Section title="About" id="about">
+      <h3 class="mb-2 text-sm font-semibold tracking-wide text-zinc-500 uppercase dark:text-zinc-400">Affiliation</h3>
+      <p class="font-medium">電気通信大学 情報理工学域 I類 (2025~)</p>
+      <ul class="mt-2 list-disc space-y-1 pl-5 marker:text-accent">
+        {clubs.map(club => <li>{club}</li>)}
+      </ul>
+    </Section>
+
+    <Section title="Recent Posts">
+      <ul class="divide-y divide-zinc-200 dark:divide-zinc-800">
+        {recentPosts.map(post => (
+          <li class="flex flex-col gap-x-4 py-2.5 sm:flex-row sm:items-baseline">
+            <time datetime={post.data.pubDate.toISOString()} class="shrink-0 text-sm text-zinc-500 tabular-nums dark:text-zinc-400">
+              {formatDate(post.data.pubDate)}
+            </time>
+            <a href={`/blog/${post.id}/`} class={linkClass}>{post.data.title}</a>
+          </li>
+        ))}
+      </ul>
+      <p class="mt-4">
+        <a href="/blog/" class="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">すべての記事 →</a>
+      </p>
+    </Section>
+
+    <Section title="Links" id="links">
+      <dl class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2">
+        {links.map(({ label, href, text }) => (
+          <dt class="text-zinc-500 dark:text-zinc-400">{label}</dt>
+          <dd class="min-w-0 break-words"><a href={href} class={linkClass}>{text}</a></dd>
+        ))}
+      </dl>
+    </Section>
+
+    <Section title="Reciprocal Links">
+      <ReciprocalLinks />
+    </Section>
+  </div>
 </Base>

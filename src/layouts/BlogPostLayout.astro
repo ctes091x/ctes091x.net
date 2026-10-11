@@ -1,16 +1,21 @@
 ---
 import Base from "./Base.astro";
 import BlogHeader from "../components/BlogHeader.astro";
+import Prose from "../components/Prose.astro";
 
 const { frontmatter } = Astro.props;
-const pubDate = new Date(frontmatter.pubDate);
-const modDate = new Date(frontmatter.modDate);
 ---
 
 <Base title={frontmatter.title} type="blog" ogImage={frontmatter.ogImage} >
   <article>
-    <BlogHeader title={frontmatter.title} pubDate={pubDate} modDate={modDate} />
-    <slot />
+    <BlogHeader
+      title={frontmatter.title}
+      pubDate={frontmatter.pubDate}
+      modDate={frontmatter.modDate}
+      sourcePath={frontmatter.sourcePath}
+    />
+    <Prose>
+      <slot />
+    </Prose>
   </article>
 </Base>
-
