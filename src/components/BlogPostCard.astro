@@ -14,7 +14,7 @@ const { title, url, ogImage, pubDate } = Astro.props;
 <li>
   <a
     href={url}
-    class="group flex h-full flex-col overflow-hidden rounded-xl border border-ctp-surface0 transition-colors hover:border-accent hover:bg-ctp-mantle"
+    class="group flex h-full flex-col overflow-hidden rounded-xl border border-ctp-surface0 transition-colors hover:bg-ctp-mantle"
   >
     {ogImage ? (
       <img
@@ -28,7 +28,7 @@ const { title, url, ogImage, pubDate } = Astro.props;
       <div class="aspect-video w-full border-b border-ctp-surface0 bg-linear-to-br from-ctp-mauve/25 to-ctp-blue/10" />
     )}
     <div class="flex flex-1 flex-col gap-2 p-4">
-      <h2 class="font-semibold leading-snug group-hover:underline group-hover:decoration-accent group-hover:underline-offset-4">{title}</h2>
+      <h2 class="font-semibold leading-snug">{title}</h2>
       <time datetime={pubDate.toISOString()} class="mt-auto text-sm text-ctp-subtext0 tabular-nums">{formatDate(pubDate)}</time>
     </div>
   </a>
