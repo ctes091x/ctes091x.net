@@ -71,11 +71,11 @@ solにSSH接続するときに`-D 1080`というオプションを追加する�
 ## おわりに
 Androidで電通大のVPNが使用できない不便さはしばしば自虐を込めてネタにされますが、学内ネットワークへのアクセスは本記事で紹介した方法を用いることで比較的簡単に行うことができます。ですが普段使用しているブラウザやAndroidシステム自身を学内ネットワークに接続することができないなどの点で不便であるのも事実です。やはり最後に一発だけ叫んでおきましょう。ぜひ皆様もご一緒に、せーのっ。
 
-<p style="font-size:2em;text-align: center;">「「「電通大はAndroidでVPNを使わせろ！！！」」」</p>
+<p style="font-size: 1.5em; text-align: center;">「「「電通大はAndroidでVPNを使わせろ！！！」」」</p>
 
 ありがとうございました。
 
-来週はraaaさんの「[未定](https://wiki.mma.club.uec.ac.jp)」です。
+次回はraaaさんの「[Docker+DevContainerでNext.jsの環境構築してみた](https://qiita.com/kurikara_raaa/items/e149abb56f78ff761f37)」です。
 
 ## 参考文献
 

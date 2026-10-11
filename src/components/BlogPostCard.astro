@@ -1,13 +1,35 @@
 ---
+interface Props {
+  title: string;
+  url: string;
+  ogImage?: string;
+  pubDate: Date;
+}
+
+import { formatDate } from "../lib/posts";
+
 const { title, url, ogImage, pubDate } = Astro.props;
 ---
 
-<li class="card blog-post-card">
-  <a href={url}>
-    <img src={ogImage} />
-    <div>
-      <span class="title">{title}</span>
-      <span class="pub-date">{pubDate}</span>
+<li>
+  <a
+    href={url}
+    class="group flex h-full flex-col overflow-hidden rounded-xl border border-ctp-surface0 transition-colors hover:bg-ctp-mantle"
+  >
+    {ogImage ? (
+      <img
+        src={ogImage}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        class="aspect-video w-full border-b border-ctp-surface0 object-cover"
+      />
+    ) : (
+      <div class="aspect-video w-full border-b border-ctp-surface0 bg-linear-to-br from-ctp-mauve/25 to-ctp-blue/10" />
+    )}
+    <div class="flex flex-1 flex-col gap-2 p-4">
+      <h2 class="font-semibold leading-snug">{title}</h2>
+      <time datetime={pubDate.toISOString()} class="mt-auto text-sm text-ctp-subtext0 tabular-nums">{formatDate(pubDate)}</time>
     </div>
   </a>
 </li>

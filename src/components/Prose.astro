@@ -1,0 +1,30 @@
+---
+// Markdown 本文用のラッパー。要素に直接クラスを付けられないので typography プラグインの修飾子で調整する
+---
+
+<div
+  class:list={[
+    "prose prose-catppuccin max-w-none md:prose-lg",
+    // 見出し
+    "prose-headings:font-bold prose-headings:scroll-mt-6",
+    "prose-h2:border-l-4 prose-h2:border-accent prose-h2:pl-3 prose-h2:text-[1.4em]",
+    "prose-h3:text-[1.15em]",
+    // リンク
+    "prose-a:font-normal prose-a:decoration-accent/50 prose-a:underline-offset-4 prose-a:transition-colors hover:prose-a:decoration-accent",
+    // インラインコード (typography 既定のバッククォートを消してピル状に)
+    "prose-code:before:content-none prose-code:after:content-none",
+    "prose-inline-code:rounded prose-inline-code:bg-ctp-surface0/70 prose-inline-code:px-1.5 prose-inline-code:py-0.5 prose-inline-code:font-normal prose-inline-code:wrap-anywhere",
+    // コードブロック (背景色は Shiki が付ける)
+    "prose-pre:rounded-lg prose-pre:border prose-pre:border-ctp-surface0",
+    // 引用 (typography 既定の斜体と引用符を外す)
+    "prose-blockquote:font-normal prose-blockquote:not-italic",
+    "[&_blockquote_p]:before:content-none [&_blockquote_p]:after:content-none",
+    // 画像: 縦長のスクリーンショットが画面を占領しないよう高さを抑えて中央寄せ
+    "prose-img:mx-auto prose-img:max-h-160 prose-img:w-auto prose-img:rounded-lg",
+    // 表: 狭い画面では横スクロール。セル内のコードは途中で折り返さない
+    "max-md:prose-table:block max-md:prose-table:overflow-x-auto max-md:prose-td:min-w-40",
+    "[&_td_code]:whitespace-nowrap",
+  ]}
+>
+  <slot />
+</div>

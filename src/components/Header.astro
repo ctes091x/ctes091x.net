@@ -1,20 +1,34 @@
 ---
-import "./Header.css"
+const pathname = Astro.url.pathname;
+
+const navItems = [
+  { href: "/", label: "Home", current: pathname === "/" },
+  { href: "/#about", label: "About", current: false },
+  { href: "/#links", label: "Links", current: false },
+  { href: "/blog/", label: "Blog", current: pathname.startsWith("/blog") },
+];
 ---
 
-<header class="page-header">
-  <div>
-    <a href="/" class="brand">
-      <img src="https://github.com/ctes091x.png" width="40" alt="Icon">
-      <span>@ctes091x</span>
+<header class="border-b border-ctp-surface0 bg-ctp-base">
+  <div class="page-container flex h-16 items-center justify-between gap-4">
+    <a href="/" class="flex shrink-0 items-center gap-2.5 font-semibold transition-opacity hover:opacity-80">
+      <img src="https://github.com/ctes091x.png" width="32" height="32" alt="" class="size-8 rounded-full" />
+      <span class="max-[400px]:sr-only">@ctes091x</span>
     </a>
-    <div class="header-nav">
-      <ul>
-        <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="/#about" class="nav-link">About</a></li>
-        <li><a href="/#links" class="nav-link">Links</a></li>
-        <li><a href="/blog/" class="nav-link">Blog</a></li>
+    <nav aria-label="メイン">
+      <ul class="flex items-center gap-1 text-sm sm:gap-2">
+        {navItems.map(({ href, label, current }) => (
+          <li>
+            <a
+              href={href}
+              aria-current={current ? "page" : undefined}
+              class="rounded-md px-2 py-1.5 text-ctp-subtext0 transition-colors hover:bg-ctp-surface0 hover:text-ctp-text aria-[current=page]:font-semibold aria-[current=page]:text-ctp-text sm:px-3"
+            >
+              {label}
+            </a>
+          </li>
+        ))}
       </ul>
-    </div>
+    </nav>
   </div>
 </header>

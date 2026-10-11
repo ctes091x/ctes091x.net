@@ -1,143 +1,82 @@
-@import "./reset.css";
-@import "./variables.css";
+@import "tailwindcss";
+/* ライトは Latte、dark バリアント (prefers-color-scheme: dark) では Mocha。色は `*-ctp-*` で使う */
+@import "@catppuccin/tailwindcss/mocha.css";
+@plugin "@tailwindcss/typography";
 
-body {
-  transition: all 0.2s;
-  font-family: var(--font-base);
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.8;
+@theme inline {
+  /* サイト全体のアクセント色。Catppuccin のどの色に替えてもよい */
+  --color-accent: var(--catppuccin-color-blue);
 }
 
-main {
-  width: 100%;
-  margin: 0;
-  padding: 0.8rem;
+@theme {
+  --font-sans:
+    system-ui, -apple-system, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic UI", Meiryo, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
 }
 
-main > div {
-  max-width: 960px;
-  margin: auto;
+/* ページ共通の横幅。Header / main / Footer で揃える */
+@utility page-container {
+  @apply mx-auto w-full max-w-3xl px-4 sm:px-6;
 }
 
-main p {
-  text-indent: 1rem;
-  font-size: 1.1rem;
-  margin: 1em 0;
+/* typography プラグインの配色を Catppuccin に。`.prose` 既定の配色より優先させるため `&.prose` で詳細度を上げる */
+@utility prose-catppuccin {
+  &.prose {
+    --tw-prose-body: var(--color-ctp-text);
+    --tw-prose-headings: var(--color-ctp-text);
+    --tw-prose-lead: var(--color-ctp-subtext1);
+    --tw-prose-links: var(--color-ctp-text);
+    --tw-prose-bold: var(--color-ctp-text);
+    --tw-prose-counters: var(--color-ctp-overlay1);
+    --tw-prose-bullets: var(--color-accent);
+    --tw-prose-hr: var(--color-ctp-surface0);
+    --tw-prose-quotes: var(--color-ctp-subtext0);
+    --tw-prose-quote-borders: color-mix(in oklab, var(--color-accent) 60%, transparent);
+    --tw-prose-captions: var(--color-ctp-subtext0);
+    --tw-prose-kbd: var(--color-ctp-text);
+    --tw-prose-kbd-shadows: color-mix(in oklab, var(--color-ctp-text) 10%, transparent);
+    --tw-prose-code: var(--color-ctp-text);
+    --tw-prose-pre-code: var(--color-ctp-text);
+    --tw-prose-pre-bg: var(--color-ctp-mantle);
+    --tw-prose-th-borders: var(--color-ctp-surface1);
+    --tw-prose-td-borders: var(--color-ctp-surface0);
+  }
 }
 
-main a {
-  color: var(--color-text);
-  transition: all 0.2s;
-  text-decoration: underline;
-}
+/* `pre` の中を除いたインラインコード。typography の `prose-code:` は `pre code` にも当たるため */
+@custom-variant prose-inline-code (& :is(:not(pre) > code):not(:where(.not-prose *)));
 
-main a:hover {
-  opacity: 0.9;
-  text-decoration: underline;
-}
-
-main h2, main h3 {
-  transition: all 0.2s;
-}
-
-
-main h2:hover, main h3:hover {
-  opacity: 0.8;
-}
-
-main h2 {
-  padding: 0.2em 1em;
-  margin: 2em 0 0.5em 0;
-  border-left: 4px solid var(--color-primary);
-  background: var(--color-bg-secondary);
-}
-
-main h2:nth-of-type(1) {
-  margin-top: 0.5em;
-}
-
-main h3 {
-  padding: 0.2em 0.5em;
-  margin: 0.3em 0;
-  border-bottom: 1px solid var(--color-primary);
-}
-
-main ul {
-  list-style-type: disc;
-  margin: 1em 0;
-}
-
-ul ul {
-  margin: 0;
-}
-
-main li {
-  font-size: 1.1rem;
-  margin-left: 2em;
-}
-
-main .astro-code {
-  padding: 1em 2em;
-}
-
-main code:not(pre code) {
-  font-size: 0.8em;
-  padding: 0.3em;
-  border-radius: 0.3em;
-  overflow-wrap: anywhere;
-  background: var(--color-bg-secondary);
-}
-
-main blockquote {
-  margin: 1em 0;
-  padding: 0.3em 1em;
-  color: var(--color-text-secondary);
-  border-left: 5px solid var(--color-text-secondary);
-  background: var(--color-bg-secondary);
-}
-
-main table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-main table th, main table td {
-  padding: 0.5em;
-  border: 1px solid var(--color-bg-secondary);
-}
-
-main table thead tr {
-  background: var(--color-bg-secondary);
-}
-
-main img {
-  margin: auto;
-  text-align: center;
-  max-height: 640px;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-}
-
-
-@media screen and (max-width: 1024px) {
-  main > div {
-    margin: 0 1em;
+@layer base {
+  html {
+    @apply scheme-light-dark;
   }
 
-  main p {
-    font-size: 1rem;
+  ::selection {
+    /* Catppuccin のスタイルガイドに沿って overlay2 を薄く敷く */
+    background-color: color-mix(in oklab, var(--color-ctp-overlay2) 30%, transparent);
   }
 
-  main li{
-    font-size: 1rem;
-    margin-left: 2em;
+  h1, h2, h3, h4 {
+    /* 約物の詰め。【】で始まる見出しの頭の空きをなくす */
+    font-feature-settings: "palt";
+    word-break: auto-phrase;
+    text-wrap: balance;
   }
+}
 
-  main table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+/*
+ * Shiki のデュアルテーマ切り替え (catppuccin-latte / catppuccin-mocha)。
+ * ライトテーマは inline style の color / background-color、ダークテーマは --shiki-dark* に入っている。
+ * https://docs.astro.build/en/guides/syntax-highlighting/#light-and-dark-mode-themes
+ */
+@media (prefers-color-scheme: dark) {
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
   }
 }

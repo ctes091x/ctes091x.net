@@ -1,24 +1,33 @@
 ---
-import "./BlogHeader.css";
-const { title, pubDate, modDate } = Astro.props;
-const pathname = Astro.url.pathname;
+import { formatDate } from "../lib/posts";
+
+interface Props {
+  title: string;
+  pubDate: Date;
+  modDate?: Date;
+  /** リポジトリルートからの Markdown ファイルのパス */
+  sourcePath?: string;
+}
+
+const { title, pubDate, modDate, sourcePath } = Astro.props;
+const pageUrl = new URL(Astro.url.pathname, Astro.site);
+
+const tweetUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(`${title} - 綿糸てせのブログ`)}&url=${encodeURIComponent(pageUrl.href)}`;
+const sourceUrl = sourcePath && `https://github.com/ctes091x/ctes091x.net/blob/main/${sourcePath}`;
+
+const linkClass = "underline decoration-ctp-overlay0 underline-offset-4 transition-colors hover:text-ctp-text hover:decoration-accent";
 ---
 
-<header class="blog-header">
-  <h1>{title}</h1>
-  <div class="header-contents">
-    <p>
-      <span>投稿日: <time datetime={pubDate.toISOString()}>{pubDate.toISOString().slice(0, 10)}</time></span><wbr>{" "}
-      { !isNaN (modDate) && (<span>最終更新日: <time datetime={modDate.toISOString()}>{modDate.toISOString().slice(0, 10)}</time></span>)}
+<header class="mb-10 border-b border-ctp-surface0 pb-6">
+  <h1 class="text-2xl leading-snug font-bold tracking-tight md:text-3xl">{title}</h1>
+  <div class="mt-4 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-sm text-ctp-subtext0">
+    <p class="flex flex-wrap gap-x-4 tabular-nums">
+      <span>投稿日 <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time></span>
+      {modDate && <span>最終更新日 <time datetime={modDate.toISOString()}>{formatDate(modDate)}</time></span>}
     </p>
-    <p>
-    <span>
-      <a target="_blank" rel="noopener noreferrer" href={`https://x.com/intent/tweet?text=${encodeURIComponent(`${title} - 綿糸てせのブログ`)}&url=${encodeURIComponent(`https://ctes091x.net${pathname}`)}`} >ツイート</a>
-    </span>{" "}
-    <span>
-      <a target="_blank" rel="noopener noreferrer" href={`https://github.com/ctes091x/ctes091x.net/blob/master/src/content/${pathname.endsWith("/") ? pathname.slice(0,-1) : pathname}/index.md`}>GitHubで見る</a>
-    </span>
+    <p class="flex gap-x-4">
+      <a target="_blank" rel="noopener noreferrer" href={tweetUrl} class={linkClass}>ツイート</a>
+      {sourceUrl && <a target="_blank" rel="noopener noreferrer" href={sourceUrl} class={linkClass}>GitHubで見る</a>}
     </p>
   </div>
 </header>
-

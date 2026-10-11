@@ -1,13 +1,32 @@
 ---
+interface Props {
+  name: string;
+  url: string;
+  iconId: string;
+  desc: string;
+}
+
 const { name, url, iconId, desc } = Astro.props;
 ---
 
-<li class="reciprocal-link-card">
-  <a href={url} target="_blank">
-    <img src={"https://unavatar.io/" + iconId} />
-    <div>
-      <span class="name">{name}</span>
-      <span class="desc">{desc}</span>
+<li>
+  <a
+    href={url}
+    target="_blank"
+    class="flex h-full items-center gap-3 rounded-xl border border-ctp-surface0 p-3 transition-colors hover:bg-ctp-mantle"
+  >
+    <img
+      src={"https://unavatar.io/" + iconId}
+      width="48"
+      height="48"
+      alt=""
+      loading="lazy"
+      decoding="async"
+      class="size-12 shrink-0 rounded-full bg-ctp-surface0 object-cover"
+    />
+    <div class="min-w-0">
+      <p class="font-medium leading-snug">{name}</p>
+      <p class="mt-0.5 text-xs leading-relaxed text-ctp-subtext0">{desc}</p>
     </div>
   </a>
 </li>
