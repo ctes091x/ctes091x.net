@@ -5,8 +5,12 @@ updates:
     schedule:
       interval: weekly
     # 公開から7日経っていない版は提案しない (乗っ取られたパッケージ対策)
+    # semver-*-days を省くとジョブ定義上 0 で展開されるため明示する
     cooldown:
       default-days: 7
+      semver-major-days: 7
+      semver-minor-days: 7
+      semver-patch-days: 7
     groups:
       tailwind:
         patterns: ["tailwindcss", "@tailwindcss/*", "@catppuccin/tailwindcss"]
